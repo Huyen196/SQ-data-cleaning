@@ -17,9 +17,9 @@
 ## xóa khoảng trắng đầu và cuối, sử dụng TRIM
     UPDATE club_member_info_clean  SET full_name = TRIM(full_name)
 ## đổi toàn bộ tên trong cột full name thống nhất
-upper chữ cái đầu tiên
+- upper chữ cái đầu tiên
     SELECT UPPER(SUBSTRING(full_name, 1,1)), full_name FROM club_member_info_clean
-nối kí tự đầu vào phần còn lại của chuỗi
+- nối kí tự đầu vào phần còn lại của chuỗi
     UPDATE club_member_info_clean
     SET full_name = CONCAT(UPPER(SUBSTRING(full_name, 1,1)), SUBSTRING(full_name,2, 99)
-C2: select concat(UPPER(SUBSTRING(full_name, 1,1)), SUBSTRING(full_name, 2,LENGHT(full_name)-1) full_name_adj, full_name FROM club_member_info_clean
+- C2: select concat(UPPER(SUBSTRING(full_name, 1,1)), SUBSTRING(full_name, 2,LENGHT(full_name)-1) full_name_adj, full_name FROM club_member_info_clean

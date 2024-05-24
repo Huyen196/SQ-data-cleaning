@@ -23,3 +23,12 @@
     UPDATE club_member_info_clean
     SET full_name = CONCAT(UPPER(SUBSTRING(full_name, 1,1)), SUBSTRING(full_name,2, 99)
 - C2: select concat(UPPER(SUBSTRING(full_name, 1,1)), SUBSTRING(full_name, 2,LENGHT(full_name)-1) full_name_adj, full_name FROM club_member_info_clean
+## chỉnh sửa lại tuổi ngoài phạm vi thực tế
+- tìm những hàng bị trống dữ liệu và thay bằng 45 tuổi
+    UPDATE club_member_info_clean SET age = 45 WHERE age = ' '
+- tìm những giá trị tuổi phi thực tế
+    SELECT MAX(age) FROM club_member_info_clean WHERE age > 80
+- thay những giá trị đã tìm được thành tuổi trung bình
+    UPDATE club_member_info_clean SET age = 45 WHERE age >80
+    
+

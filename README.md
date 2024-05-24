@@ -16,3 +16,5 @@
 
 # xóa khoảng trắng đầu và cuối, sử dụng TRIM
     UPDATE club_member_info_clean  SET full_name = TRIM(full_name)
+# đổi toàn bộ tên trong cột full name thành chữ thường
+    UPDATE club_member_info_clean  SET full_name = LOWER(full_name)

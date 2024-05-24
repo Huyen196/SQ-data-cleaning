@@ -14,7 +14,7 @@
 |Constantin de la cruz|35||co3@bloglines.com|402-688-7162|6 Monument Crossing,Omaha,Nebraska|Desktop Support Technician|10/20/2015|
 |  Gaylor Redhole|38|married|gredhole4@japanpost.jp|917-394-6001|88 Cherokee Pass,New York City,New York|Legal Assistant|5/29/2019|
 
-# xóa khoảng trắng đầu và cuối, sử dụng TRIM
+## xóa khoảng trắng đầu và cuối, sử dụng TRIM
     UPDATE club_member_info_clean  SET full_name = TRIM(full_name)
-# đổi toàn bộ tên trong cột full name thành chữ thường
+## đổi toàn bộ tên trong cột full name thành chữ thường
     UPDATE club_member_info_clean  SET full_name = LOWER(full_name)
